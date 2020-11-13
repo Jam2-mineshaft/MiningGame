@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class Mine : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class Mine : MonoBehaviour
     public int currentGold;
     public Text coalText;
     public Text goldText;
+
+    [Header("Audio Setup")]
+    public AudioClip[] miningSounds;
 
     RaycastHit hit;
 
@@ -31,6 +35,7 @@ public class Mine : MonoBehaviour
                 currentCoal += coalSettings.valueToGive;
                 coalText.text = currentCoal.ToString();
                 Instantiate(coalSettings.destructionParticles, hit.transform.position, Quaternion.identity);
+                PlayAudio();
                 Destroy(hit.transform.gameObject);
             }
         }
@@ -43,8 +48,16 @@ public class Mine : MonoBehaviour
                 currentGold += goldSettings.valueToGive;
                 goldText.text = currentGold.ToString();
                 Instantiate(goldSettings.destructionParticles, hit.transform.position, Quaternion.identity);
+                PlayAudio(); // Plays mining audio
                 Destroy(hit.transform.gameObject);
             }
         }
+    }
+
+    void PlayAudio()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = miningSounds[Random.Range(0, miningSounds.Length)];
+        audio.Play();
     }
 }
