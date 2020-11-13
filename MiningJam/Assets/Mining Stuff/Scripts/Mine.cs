@@ -16,7 +16,8 @@ public class Mine : MonoBehaviour
     public Text goldText;
 
     [Header("Audio Setup")]
-    public AudioClip[] miningSounds;
+    public AudioClip[] coalMiningSounds;
+    public AudioClip[] goldMiningSounds;
 
     RaycastHit hit;
 
@@ -35,7 +36,7 @@ public class Mine : MonoBehaviour
                 currentCoal += coalSettings.valueToGive;
                 coalText.text = currentCoal.ToString();
                 Instantiate(coalSettings.destructionParticles, hit.transform.position, Quaternion.identity);
-                PlayAudio();
+                PlayCoalAudio(); // Plays mining audio
                 Destroy(hit.transform.gameObject);
             }
         }
@@ -48,16 +49,23 @@ public class Mine : MonoBehaviour
                 currentGold += goldSettings.valueToGive;
                 goldText.text = currentGold.ToString();
                 Instantiate(goldSettings.destructionParticles, hit.transform.position, Quaternion.identity);
-                PlayAudio(); // Plays mining audio
+                PlayGoldAudio(); // Plays mining audio
                 Destroy(hit.transform.gameObject);
             }
         }
     }
 
-    void PlayAudio()
+    void PlayCoalAudio()
     {
         AudioSource audio = GetComponent<AudioSource>();
-        audio.clip = miningSounds[Random.Range(0, miningSounds.Length)];
+        audio.clip = coalMiningSounds[Random.Range(0, coalMiningSounds.Length)];
+        audio.Play();
+    }
+
+    void PlayGoldAudio()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = goldMiningSounds[Random.Range(0, goldMiningSounds.Length)];
         audio.Play();
     }
 }
