@@ -723,7 +723,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f67f7d180d1e31d43959c021b45f1a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  section_one_prefab: {fileID: 2918310582573574438, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
+  generic_section_prefabs:
+  - {fileID: 2918310582573574438, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
+  - {fileID: 2918310582573574438, guid: 77419538eef4bcb40a2332b56e12801a, type: 3}
   mine_cart: {fileID: 1655908969}
 --- !u!1 &1817991149
 GameObject:

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TrackSpawner : MonoBehaviour
 {
-    public GameObject section_one_prefab;
+    public GameObject[] generic_section_prefabs;
 
     public GameObject mine_cart;
 
@@ -23,7 +23,7 @@ public class TrackSpawner : MonoBehaviour
     {
         if (mine_cart.transform.position.z >= next_spawn_position - (section_length * 3))
         {
-            Instantiate(section_one_prefab, new Vector3(0, 0, next_spawn_position), new Quaternion(0, 0, 0, 0));
+            Instantiate(generic_section_prefabs[Random.Range(0, generic_section_prefabs.Length)], new Vector3(0, 0, next_spawn_position), new Quaternion(0, 0, 0, 0));
             next_spawn_position += section_length;
         }
     }
