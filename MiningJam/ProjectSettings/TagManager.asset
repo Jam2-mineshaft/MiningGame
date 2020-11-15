@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Section_Detection
+  - Destructor
+  - Cart_Destructor
   layers:
   - Default
   - TransparentFX
