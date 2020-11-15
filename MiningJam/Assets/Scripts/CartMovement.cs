@@ -26,7 +26,7 @@ public class CartMovement : MonoBehaviour
     void FixedUpdate()
     {
         //Move Platform
-        transform.position += new Vector3(current_speed * Time.deltaTime, 0, 0);
+        transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
 
         AdjustSpeed();
     }
