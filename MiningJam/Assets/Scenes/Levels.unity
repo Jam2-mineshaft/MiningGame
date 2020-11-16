@@ -812,7 +812,10 @@ MonoBehaviour:
   generic_section_prefabs:
   - {fileID: 2918310582573574438, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
   - {fileID: 2918310582573574438, guid: 77419538eef4bcb40a2332b56e12801a, type: 3}
+  cave_exit: {fileID: 2918310582573574438, guid: 0eb793dfe857870488810cd2806fc9ba, type: 3}
+  flat_land: {fileID: 2918310582573574438, guid: 9a37d9fb1ecbb40469b4100eb1f508ec, type: 3}
   mine_cart: {fileID: 1655908969}
+  level_length: 2
 --- !u!1 &1694594368
 GameObject:
   m_ObjectHideFlags: 0
