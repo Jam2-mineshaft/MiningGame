@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 136838444283261488}
   - component: {fileID: -5275822491897644285}
   - component: {fileID: -829883470658271388}
+  - component: {fileID: 552328400}
   m_Layer: 0
   m_Name: player2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 4978686040946397375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.279253, y: -0.7535362, z: 0.24454117}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.33601663, y: 0.33601665, z: 0.33601663}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -112,8 +113,8 @@ CharacterController:
   serializedVersion: 2
   m_Height: 1
   m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_SlopeLimit: 90
+  m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -241,3 +242,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a784327dff2d740b6702fb3fdff9e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &552328400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4978686040946397375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e1953c5585791428b363c485b403d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whatPlayerIsThis: 1
+  mineReach: 7
+  coalSettings: {fileID: 11400000, guid: 795325bb960c8e745ad785885ceb99fa, type: 2}
+  goldSettings: {fileID: 11400000, guid: d6e23fa4092cb6145a96a4a4247c9a2d, type: 2}
+  currentCoal: 0
+  currentGold: 0
+  audioManager: {fileID: 0}
