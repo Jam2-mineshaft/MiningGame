@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CartMovement : MonoBehaviour
 {
+    public Cart cart;
+    public float fuel_effect = 2f;
+
     [SerializeField]
     float base_speed = 1f;
 
@@ -25,6 +28,7 @@ public class CartMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         //Move Platform
         transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
 
@@ -51,5 +55,10 @@ public class CartMovement : MonoBehaviour
         }
 
         current_speed -= speed_deficit * Time.deltaTime;
+    }
+
+    public void AddFuel()
+    {
+        current_speed += fuel_effect;
     }
 }
