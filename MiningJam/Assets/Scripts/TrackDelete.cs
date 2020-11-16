@@ -7,11 +7,9 @@ public class TrackDelete : MonoBehaviour
     public float despawn_time = 10f;
 
     GameObject section;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //StartCoroutine(DespawnTimer(despawn_time));
 
+    void Start()
+    { 
         section = transform.parent.gameObject;
     }
 

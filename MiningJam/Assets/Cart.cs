@@ -6,6 +6,7 @@ public class Cart : MonoBehaviour
 {
     public CartMovement cart_movement;
     public LayerMask resource_layer;
+    public Engine engine;
 
     public float weight;
 
@@ -21,6 +22,9 @@ public class Cart : MonoBehaviour
 
     private void Start()
     {
+        engine = gameObject.GetComponentInChildren<Engine>();
+        engine.cart = this;
+        
         if(cart_movement == null)
         {
             Debug.LogError("CartMovement not set up.");
@@ -48,6 +52,8 @@ public class Cart : MonoBehaviour
         player_A_weight = objectsSideA.Length;
         player_B_weight = objectsSideB.Length;
 
+        
+        
         int player_A_count = 0;
         int player_B_count = 0;
 

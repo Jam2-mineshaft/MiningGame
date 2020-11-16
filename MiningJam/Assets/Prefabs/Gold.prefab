@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6804130512772714491}
   - component: {fileID: 4364902772791159890}
   - component: {fileID: 5692999816155889510}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gold
   m_TagString: Gold
   m_Icon: {fileID: 0}
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5002897577014292014}
   m_LocalRotation: {x: -0.11350721, y: 0.2349088, z: 0.75477594, w: 0.6018698}
-  m_LocalPosition: {x: 1.4150333, y: 1.3537103, z: 0.42329964}
-  m_LocalScale: {x: 9.571999, y: 16.481844, z: 12.234642}
+  m_LocalPosition: {x: 1.4768, y: 1.366, z: 0.4071}
+  m_LocalScale: {x: 28.826073, y: 49.63507, z: 36.844624}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

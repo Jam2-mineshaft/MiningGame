@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8777747395214178484}
   - component: {fileID: 1958729297216314141}
   - component: {fileID: 7547024940553914409}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coal
-  m_TagString: Gold
+  m_TagString: Coal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7120242481449818465}
   m_LocalRotation: {x: -0.11350721, y: 0.2349088, z: 0.75477594, w: 0.6018698}
-  m_LocalPosition: {x: 1.838, y: 1.3537103, z: 0.42329964}
-  m_LocalScale: {x: 9.571999, y: 16.481844, z: 12.234642}
+  m_LocalPosition: {x: 1.8738, y: 1.3606, z: 0.41415}
+  m_LocalScale: {x: 51.450752, y: 81.58402, z: 60.560654}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
