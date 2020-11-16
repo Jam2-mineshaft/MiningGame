@@ -480,14 +480,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911003091}
-  m_LocalRotation: {x: -0, y: 0.8436845, z: -0, w: -0.53683937}
-  m_LocalPosition: {x: 6.07, y: 1.77, z: 3.91}
+  m_LocalRotation: {x: -0.07481287, y: 0.83545184, z: -0.11757422, w: -0.53160095}
+  m_LocalPosition: {x: 5.5, y: 2.86, z: 3.64}
   m_LocalScale: {x: 0.33601663, y: 0.33601665, z: 0.33601663}
   m_Children:
   - {fileID: 1817991152}
   m_Father: {fileID: 1405907774}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 16.021, y: -115.063, z: 0}
 --- !u!1 &1006810190
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,6 +692,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6566533650923755447, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566533650923755447, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
+      propertyPath: RotationModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566533650923755447, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
+      propertyPath: InitialModule.startRotation.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566533650923755447, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566533650923755447, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566533650923755447, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
+      propertyPath: InitialModule.startRotation.scalar
+      value: 3.1415925
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566533650923755447, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
+      propertyPath: ShapeModule.type
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566533650923755447, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 12.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566533650923755447, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 3.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566533650923755447, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566533650923755447, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566533650923755447, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6566533652370476573, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
       propertyPath: m_Name
       value: CaveDestructor
@@ -707,6 +755,10 @@ PrefabInstance:
     - target: {fileID: 6566533652370476574, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566533652370476574, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
+      propertyPath: current_speed
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 6566533652370476575, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -893,7 +945,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481661070}
   m_LocalRotation: {x: -0, y: 0.8436845, z: -0, w: -0.53683937}
-  m_LocalPosition: {x: 3.11, y: 0, z: 2.43}
+  m_LocalPosition: {x: 0.9, y: 0, z: 1.39}
   m_LocalScale: {x: 0.33601663, y: 0.33601665, z: 0.33601663}
   m_Children: []
   m_Father: {fileID: 1405907774}
@@ -950,7 +1002,7 @@ MonoBehaviour:
   cave_exit: {fileID: 2918310582573574438, guid: 0eb793dfe857870488810cd2806fc9ba, type: 3}
   flat_land: {fileID: 2918310582573574438, guid: 9a37d9fb1ecbb40469b4100eb1f508ec, type: 3}
   mine_cart: {fileID: 1655908969}
-  level_length: 2
+  level_length: 50
 --- !u!1 &1694594368
 GameObject:
   m_ObjectHideFlags: 0
