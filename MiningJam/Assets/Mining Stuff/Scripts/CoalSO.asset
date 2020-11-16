@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e957f958c9a37747b02dc3014cff527, type: 3}
+  m_Name: CoalSO
+  m_EditorClassIdentifier: 
+  valueToGive: 1
+  destructionParticles: {fileID: 6383164600909496825, guid: 1dd79d2674f40ed4e916717281a4fdcf, type: 3}
