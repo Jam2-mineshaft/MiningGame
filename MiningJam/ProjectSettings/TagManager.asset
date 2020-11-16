@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Coal
   - Gold
+  - Section_Detection
+  - Destructor
+  - Cart_Destructor
   layers:
   - Default
   - TransparentFX
