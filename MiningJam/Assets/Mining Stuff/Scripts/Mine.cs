@@ -20,6 +20,7 @@ public class Mine : MonoBehaviour
     public GameObject audioManager;
 
     RaycastHit hit;
+    RaycastHit[] hits;
 
     private void Update()
     {
