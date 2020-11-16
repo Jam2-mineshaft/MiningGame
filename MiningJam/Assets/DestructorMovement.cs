@@ -40,7 +40,7 @@ public class DestructorMovement : MonoBehaviour
             cam_speed = 0;
         }
 
-        cam.transform.localPosition = new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.3f, 0.3f), 0) * cam_speed;
+        cam.transform.localPosition = new Vector3(Random.Range(-0.6f, 0.6f), Random.Range(-0.6f, 0.6f), 0) * cam_speed;
         transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
     }
 }
