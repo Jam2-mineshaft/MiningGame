@@ -3,41 +3,47 @@ using System.Collections;
 using UnityEngine.Audio;
 
 
-public class StartOptions : MonoBehaviour {
+public class StartOptions : MonoBehaviour
+{
 
 
 
-	public int sceneToStart = 1;									
-	public bool changeScenes;											
-	public bool changeMusicOnStart;									
-	public int musicToChangeTo = 0;									
+	public int sceneToStart = 1;                                        
+	public bool changeScenes;                                           
+	public bool changeMusicOnStart;                                     
+	public int musicToChangeTo = 0;                                   
 
 
-	[HideInInspector] public bool inMainMenu = true;				
-	
+	[HideInInspector] public bool inMainMenu = true;                   
+	[HideInInspector] public Animator animColorFade;                    
+	[HideInInspector] public Animator animMenuAlpha;                    
+	[HideInInspector] public AnimationClip fadeColorAnimationClip;     
+	[HideInInspector] public AnimationClip fadeAlphaAnimationClip;      
 
 
-	private PlayMusic playMusic;										
-	private float fastFadeIn = .01f;								
-	private ShowPanels showPanels;										
+	private PlayMusic playMusic;                                      
+	private float fastFadeIn = .01f;                                    
+	private ShowPanels showPanels;                                    
 
-	
+
 	void Awake()
 	{
-		showPanels = GetComponent<ShowPanels> ();
+		showPanels = GetComponent<ShowPanels>();
 
-		playMusic = GetComponent<PlayMusic> ();
+		playMusic = GetComponent<PlayMusic>();
 	}
 
 
 	public void StartButtonClicked()
 	{
-		if (changeScenes) 
+		if (changeScenes)
 		{
-			//CHANGE SCENE FROM START MENU
-		} 
+			Invoke("LoadDelayed", fadeColorAnimationClip.length * .5f);
 
-		else 
+			animColorFade.SetTrigger("fade");
+		}
+
+		else
 		{
 			StartGameInScene();
 		}
@@ -49,23 +55,27 @@ public class StartOptions : MonoBehaviour {
 	{
 		inMainMenu = false;
 
-		showPanels.HideMenu ();
+		showPanels.HideMenu();
 
-		Application.LoadLevel (sceneToStart);
+		Application.LoadLevel(sceneToStart);
 	}
 
 
 	public void StartGameInScene()
 	{
 		inMainMenu = false;
+		animMenuAlpha.SetTrigger("fade");
 
-		//CHANGE SCENE WHEN START PRESS
+		Invoke("HideDelayed", fadeAlphaAnimationClip.length);
+
+		Debug.Log("Game started in same scene! Put your game starting stuff here.");
+
 	}
 
 
 	public void PlayNewMusic()
 	{
-		//CHANGE MUSIC TO BE ADDED
+		//ADD MUSIC
 	}
 
 	public void HideDelayed()
