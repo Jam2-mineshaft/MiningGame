@@ -27,7 +27,20 @@ public class TrackSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        /*
+        int start_loc = -135;
+
+        sections = new List<GameObject>();
+
+        caveManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<CaveManager>();
+
+        for (int i = 0; i < prefabPool.Count; i++)
+        {
+            sections.Add(GameObject.Instantiate(prefabPool[i]));
+            sections[i].transform.Translate(new Vector3(0, 0, start_loc));
+            start_loc += 135;
+        }
+        */
     }
 
     // Update is called once per frame
@@ -57,5 +70,13 @@ public class TrackSpawner : MonoBehaviour
             
         }
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Section_Detection"))
+        {
+
+        }
     }
 }
