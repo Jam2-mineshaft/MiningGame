@@ -668,7 +668,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 28c3d35103d473f4d878f60a575d2b75, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1944,6 +1944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b2e605c450df04595ec4ca70175519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cart: {fileID: 0}
+  fuel_effect: 2
   base_speed: 40
   max_speed: 40
   speed_deficit: 0.1
@@ -2625,7 +2627,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c37fbf4273ee67549a8f8fe7ad77763d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
