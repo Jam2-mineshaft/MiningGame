@@ -28,6 +28,14 @@ public class CartMovement : MonoBehaviour
         current_speed = base_speed;
     }
 
+    public void Crash()
+    {
+        AudioSource[] sounds = this.GetComponents<AudioSource>();
+
+        sounds[1].Play();
+        sounds[0].Stop();
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
