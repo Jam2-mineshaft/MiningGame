@@ -45,9 +45,15 @@ public class CartMovement : MonoBehaviour
     public void StopCart()
     {
         AudioSource[] sounds = this.GetComponents<AudioSource>();
-
         sounds[0].Stop();
     }
+
+    public void AddFuel()
+    {
+            current_speed += fuel_effect;
+    }
+
+
 
     // Update is called once per frame
     void FixedUpdate()
@@ -77,10 +83,5 @@ public class CartMovement : MonoBehaviour
             current_speed = min_speed;
         }
         current_speed -= speed_deficit * Time.deltaTime;
-    }
-
-    public void AddFuel()
-    {
-        current_speed += fuel_effect;
     }
 }

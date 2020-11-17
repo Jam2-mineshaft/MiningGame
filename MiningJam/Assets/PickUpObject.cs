@@ -6,44 +6,60 @@ public class PickUpObject : MonoBehaviour
 {
     private bool isHolding = false;
 
-    public GameObject held;
+    public GameObject ob;
     public Transform holdingSpot;
+
+    Mine mining;
 
     private void Start()
     {
-        holdingSpot = gameObject.transform;
+        mining = this.GetComponent<Mine>();
     }
 
     private void Update()
     {
-        if(isHolding)
-        {
-            held.transform.position = holdingSpot.position;
-            held.transform.rotation = holdingSpot.rotation;
-        }
+        //TODO : CHANGE INPUT BUTTON FROM 1 KEY TO CONTROLLER BUTTON
 
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if (!isHolding)
             {
-                if (other.gameObject.CompareTag("Coal") || other.gameObject.CompareTag("Gold"))
+                if (ob != null)
                 {
-                    held = other.gameObject;
-                    isHolding = true;
+                    if (ob.gameObject.CompareTag("Coal"))
+                    {
+                        ob.transform.parent = holdingSpot.transform;
+                        isHolding = true;
+                    }
+                    else if (ob.gameObject.CompareTag("Gold"))
+                    {
+                        Destroy(ob);
+                        mining.currentGold += mining.goldSettings.valueToGive;
+                    }
                 }
             }
             else
             {
-                isHolding = false;
-                held = null;
-                Rigidbody rb = held.GetComponent<Rigidbody>();
-                rb.AddForce(this.transform.forward* 100);
+                if (ob.gameObject.CompareTag("Coal"))
+                {
+                    isHolding = false;
+                    Rigidbody rb = ob.GetComponent<Rigidbody>();
+                    rb.AddForce(this.transform.forward * 100);
+                    ob = null;
+                }
             }
         }
-        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (ob == null)
+        {
+            ob = other.gameObject;
+        }
+        else
+        {
+            return;
+        }
     }
 }
