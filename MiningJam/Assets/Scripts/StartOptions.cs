@@ -23,31 +23,33 @@ public class StartOptions : MonoBehaviour
 
 	private PlayMusic playMusic;                                      
 	private float fastFadeIn = .01f;                                    
-	private ShowPanels showPanels;                                    
+	private ShowPanels showPanels;
 
+	GameObject start;
 
 	void Awake()
 	{
 		showPanels = GetComponent<ShowPanels>();
 
 		playMusic = GetComponent<PlayMusic>();
+
+		start = GameObject.FindWithTag("Start");
 	}
 
 
 	public void StartButtonClicked()
 	{
-		if (changeScenes)
-		{
-			Invoke("LoadDelayed", fadeColorAnimationClip.length * .5f);
+			if (changeScenes)
+			{
+				Invoke("LoadDelayed", fadeColorAnimationClip.length * .5f);
 
-			animColorFade.SetTrigger("fade");
-		}
+				animColorFade.SetTrigger("fade");
+			}
 
-		else
-		{
-			StartGameInScene();
-		}
-
+			else
+			{
+				StartGameInScene();
+			}
 	}
 
 
