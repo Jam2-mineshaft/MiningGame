@@ -77,10 +77,6 @@ public class DestructorMovement : MonoBehaviour
         yield break;
     }
 
-
-
-
-
     // Update is called once per frame
     void Update()
     {

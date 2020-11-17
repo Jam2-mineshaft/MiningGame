@@ -24,12 +24,12 @@ public class Cart : MonoBehaviour
     {
         engine = gameObject.GetComponentInChildren<Engine>();
         engine.cart = this;
-        
-        if(cart_movement == null)
+
+        if (cart_movement == null)
         {
             Debug.LogError("CartMovement not set up.");
         }
-        if(side_A_area == null || side_B_area == null)
+        if (side_A_area == null || side_B_area == null)
         {
             Debug.LogError("Side colliders not assigned.");
         }
@@ -52,15 +52,15 @@ public class Cart : MonoBehaviour
         player_A_weight = objectsSideA.Length;
         player_B_weight = objectsSideB.Length;
 
-        
-        
+
+
         int player_A_count = 0;
         int player_B_count = 0;
 
         for (int i = 0; i < objectsSideA.Length; i++)
         {
             GameObject resource = objectsSideA[i].gameObject;
-            if(resource.CompareTag("Gold"))
+            if (resource.CompareTag("Gold"))
             {
                 player_A_count++;
             }
@@ -91,8 +91,8 @@ public class Cart : MonoBehaviour
     }
 
     public void FuelBellow50()
-    {}
+    { }
     public void FuelBellow30()
-    {}
+    { }
 
 }
