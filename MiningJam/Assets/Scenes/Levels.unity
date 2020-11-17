@@ -912,7 +912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6566533652370476574, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
       propertyPath: current_speed
-      value: 42
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6566533652370476575, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1138,6 +1138,9 @@ MonoBehaviour:
   base_speed: 40
   max_speed: 40
   speed_deficit: 0.1
+  furnace_lights:
+  - {fileID: 131421293}
+  - {fileID: 1733900935}
 --- !u!114 &1655908971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1153,6 +1156,10 @@ MonoBehaviour:
   generic_section_prefabs:
   - {fileID: 2918310582573574438, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
   - {fileID: 2918310582573574438, guid: 77419538eef4bcb40a2332b56e12801a, type: 3}
+  - {fileID: 2918310582573574438, guid: c8c29d9632f9ac14e9f662c15fcd0e27, type: 3}
+  - {fileID: 2918310582573574438, guid: 3a11074d6d081354fa3424dbc2eac8b5, type: 3}
+  - {fileID: 2918310582573574438, guid: 4c814e3d120f4524ea41fd3b41068439, type: 3}
+  - {fileID: 2918310582573574438, guid: 9c426a566fdd8704f8febef927bc9f32, type: 3}
   cave_exit: {fileID: 2918310582573574438, guid: 0eb793dfe857870488810cd2806fc9ba, type: 3}
   flat_land: {fileID: 2918310582573574438, guid: 9a37d9fb1ecbb40469b4100eb1f508ec, type: 3}
   mine_cart: {fileID: 1655908969}
@@ -1405,6 +1412,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3c48bd866db7b9743b5aa75973ccbbac, type: 3}
   - {fileID: 8300000, guid: c02e94f107d147d4eb5cb40db64075ab, type: 3}
   - {fileID: 8300000, guid: 2d1055a999e292942b7573fd36cf2e2c, type: 3}
+--- !u!1 &1733900935 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2255427539776608786, guid: 5583a265544ee2f4092b8467f2579c6c, type: 3}
+  m_PrefabInstance: {fileID: 1405907773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1817991149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,7 +1531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3636425598038491994, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: 3636425598038491994, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
       propertyPath: m_LocalPosition.y

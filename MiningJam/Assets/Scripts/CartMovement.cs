@@ -16,6 +16,8 @@ public class CartMovement : MonoBehaviour
     private float min_speed = 0;
     private float current_speed = 0;
 
+    public GameObject[] furnace_lights;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,11 @@ public class CartMovement : MonoBehaviour
         transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
 
         AdjustSpeed();
+
+        for (int i = 0; i < furnace_lights.Length; i++)
+        {
+            furnace_lights[i].GetComponent<Light>().intensity = current_speed / 15;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
