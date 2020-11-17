@@ -130,10 +130,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1405907774}
     m_Modifications:
+    - target: {fileID: -4086742730679208795, guid: c6537e8513ad2174a90a51e01264a3c5, type: 3}
+      propertyPath: Speed
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1980241626, guid: c6537e8513ad2174a90a51e01264a3c5, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1694594368}
+    - target: {fileID: 543450652305255093, guid: c6537e8513ad2174a90a51e01264a3c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.75000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 543450652305255093, guid: c6537e8513ad2174a90a51e01264a3c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.40199995
+      objectReference: {fileID: 0}
+    - target: {fileID: 543450652305255093, guid: c6537e8513ad2174a90a51e01264a3c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000004202129
+      objectReference: {fileID: 0}
     - target: {fileID: 2101977544679231433, guid: c6537e8513ad2174a90a51e01264a3c5, type: 3}
       propertyPath: m_Name
       value: player
@@ -635,10 +651,30 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1694594368}
+    - target: {fileID: 136838444283261488, guid: 44139483940e3a64c946da627daff84c, type: 3}
+      propertyPath: Speed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 543450653647813127, guid: 44139483940e3a64c946da627daff84c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.75000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 543450653647813127, guid: 44139483940e3a64c946da627daff84c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000004202129
+      objectReference: {fileID: 0}
+    - target: {fileID: 543450653647813127, guid: 44139483940e3a64c946da627daff84c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.40199995
+      objectReference: {fileID: 0}
     - target: {fileID: 4978686040946397375, guid: 44139483940e3a64c946da627daff84c, type: 3}
       propertyPath: m_Name
       value: player2
       objectReference: {fileID: 0}
+    - target: {fileID: 5262271953371862793, guid: 44139483940e3a64c946da627daff84c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 28c3d35103d473f4d878f60a575d2b75, type: 2}
     - target: {fileID: 8314309748711501278, guid: 44139483940e3a64c946da627daff84c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6725619
