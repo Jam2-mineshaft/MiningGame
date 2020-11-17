@@ -13,6 +13,7 @@ TagManager:
   - Options
   - Highscore
   - Quit
+  - Slider
   layers:
   - Default
   - TransparentFX

@@ -133,6 +133,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8232431584783200752, guid: 1159718ce207b3a448feddf6fcb19dae, type: 3}
   m_PrefabInstance: {fileID: 1838162700}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &256971610 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8232431584783297068, guid: 1159718ce207b3a448feddf6fcb19dae, type: 3}
+  m_PrefabInstance: {fileID: 1838162700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &261015710 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8232431584783113498, guid: 1159718ce207b3a448feddf6fcb19dae, type: 3}
@@ -155,7 +160,10 @@ MonoBehaviour:
   highscore: {fileID: 2142786103}
   quit: {fileID: 997869437}
   masterUI: {fileID: 261015710}
+  sfxSlider: {fileID: 256971610}
+  musicSlider: {fileID: 739410979}
   Selection: 0
+  audioSelection: 1
   animColorFade: {fileID: 0}
   animMenuAlpha: {fileID: 0}
   fadeColorAnimationClip: {fileID: 0}
@@ -243,6 +251,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &739410979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8232431584783217220, guid: 1159718ce207b3a448feddf6fcb19dae, type: 3}
+  m_PrefabInstance: {fileID: 1838162700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &997869437 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8232431584783230038, guid: 1159718ce207b3a448feddf6fcb19dae, type: 3}
@@ -410,6 +423,10 @@ PrefabInstance:
     - target: {fileID: 8232431584783288308, guid: 1159718ce207b3a448feddf6fcb19dae, type: 3}
       propertyPath: m_TagString
       value: Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232431584783297068, guid: 1159718ce207b3a448feddf6fcb19dae, type: 3}
+      propertyPath: m_TagString
+      value: Slider
       objectReference: {fileID: 0}
     - target: {fileID: 8232431584802776254, guid: 1159718ce207b3a448feddf6fcb19dae, type: 3}
       propertyPath: m_AnchorMin.y
