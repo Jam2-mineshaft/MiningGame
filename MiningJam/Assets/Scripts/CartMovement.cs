@@ -36,6 +36,13 @@ public class CartMovement : MonoBehaviour
         sounds[0].Stop();
     }
 
+    public void StopCart()
+    {
+        AudioSource[] sounds = this.GetComponents<AudioSource>();
+
+        sounds[0].Stop();
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -49,18 +56,6 @@ public class CartMovement : MonoBehaviour
             {
                 furnace_lights[i].GetComponent<Light>().intensity = current_speed / 15;
             }
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Destructor"))
-        {
-
-            //Move Platform
-            transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
-
-            AdjustSpeed();
         }
     }
 

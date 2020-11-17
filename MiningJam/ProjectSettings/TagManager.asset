@@ -9,6 +9,7 @@ TagManager:
   - Section_Detection
   - Destructor
   - Cart_Destructor
+  - GameWin
   layers:
   - Default
   - TransparentFX
