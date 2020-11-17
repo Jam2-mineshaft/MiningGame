@@ -31,23 +31,24 @@ public class CartMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
         if (!gameManager.GameFinished())
-        //Move Platform
-        transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
+        {
+            //Move Platform
+            transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
+            AdjustSpeed();
 
-        AdjustSpeed();
-
-        for (int i = 0; i < furnace_lights.Length; i++)
-        {
-            furnace_lights[i].GetComponent<Light>().intensity = current_speed / 15;
+            for (int i = 0; i < furnace_lights.Length; i++)
+            {
+                furnace_lights[i].GetComponent<Light>().intensity = current_speed / 15;
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Destructor"))
-        
+        {
+
             //Move Platform
             transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
 
@@ -61,11 +62,11 @@ public class CartMovement : MonoBehaviour
         {
             current_speed = max_speed;
         }
+
         if (current_speed < min_speed)
         {
             current_speed = min_speed;
         }
-
         current_speed -= speed_deficit * Time.deltaTime;
     }
 }
