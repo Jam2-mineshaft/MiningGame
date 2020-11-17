@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CartMovement : MonoBehaviour
 {
+    GameManager gameManager;
+
     [SerializeField]
     float base_speed = 1f;
 
@@ -21,28 +23,35 @@ public class CartMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+
         current_speed = base_speed;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        
+        if (!gameManager.GameFinished())
         //Move Platform
         transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
 
         AdjustSpeed();
 
-        for (int i = 0; i < furnace_lights.Length; i++)
-        {
-            furnace_lights[i].GetComponent<Light>().intensity = current_speed / 15;
+        for (int i = 0; i < furnace_lights.Length; i++)
+        {
+            furnace_lights[i].GetComponent<Light>().intensity = current_speed / 15;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Destructor"))
-        {
-            print("gameover");
+        
+            //Move Platform
+            transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
+
+            AdjustSpeed();
         }
     }
 
