@@ -14,7 +14,7 @@ public class Mine : MonoBehaviour
     public int currentCoal;
     public int currentGold;
     //public Text coalText;
-    //public Text goldText;
+    public Text goldText;
 
     [Header("Audio Setup")]
     public GameObject audioManager;
@@ -52,7 +52,7 @@ public class Mine : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Joystick1Button0)) // If player presses correct input then add value to coal, change UI text and destroy the coal block -- CHANGE SO IT FUNCTIONS WITH EACH PLAYER'S JOYSTICK
                 {
                     currentGold += goldSettings.valueToGive;
-                    //goldText.text = currentGold.ToString();
+                    goldText.text = currentGold.ToString();
                     Instantiate(goldSettings.destructionParticles, hit.transform.position, Quaternion.identity);
                     audioManager.GetComponent<PlayAudio>().PlayGoldAudio(); // Plays mining audio
                     Destroy(hit.transform.gameObject);
@@ -81,7 +81,7 @@ public class Mine : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Joystick2Button0)) // If player presses correct input then add value to coal, change UI text and destroy the coal block -- CHANGE SO IT FUNCTIONS WITH EACH PLAYER'S JOYSTICK
                 {
                     currentGold += goldSettings.valueToGive;
-                    //goldText.text = currentGold.ToString();
+                    goldText.text = currentGold.ToString();
                     Instantiate(goldSettings.destructionParticles, hit.transform.position, Quaternion.identity);
                     audioManager.GetComponent<PlayAudio>().PlayGoldAudio(); // Plays mining audio
                     Destroy(hit.transform.gameObject);
