@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CartMovement : MonoBehaviour
 {
+    public Cart cart;
+    public float fuel_effect = 2f;
+
     GameManager gameManager;
 
     [SerializeField]
@@ -31,6 +34,9 @@ public class CartMovement : MonoBehaviour
     public void Crash()
     {
         AudioSource[] sounds = this.GetComponents<AudioSource>();
+
+        //Move Platform
+        transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
 
         sounds[1].Play();
         sounds[0].Stop();
@@ -71,5 +77,10 @@ public class CartMovement : MonoBehaviour
             current_speed = min_speed;
         }
         current_speed -= speed_deficit * Time.deltaTime;
+    }
+
+    public void AddFuel()
+    {
+        current_speed += fuel_effect;
     }
 }
