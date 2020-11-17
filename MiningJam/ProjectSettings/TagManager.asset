@@ -9,6 +9,10 @@ TagManager:
   - Section_Detection
   - Destructor
   - Cart_Destructor
+  - Start
+  - Options
+  - Highscore
+  - Quit
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DrawHighscores : MonoBehaviour
 {
-    public TextAsset jsonFile;
+    /*public TextAsset jsonFile;
     private int[] scores;
 
 
@@ -16,8 +16,8 @@ public class DrawHighscores : MonoBehaviour
         /*for (int i = 0; i < 5; i++)
         {
             scores[i] = JsonUtility.FromJson<scores>(jsonFile.text);
-        }*/
-    }
+        }
+    }*/
 
     // Update is called once per frame
     void Update()

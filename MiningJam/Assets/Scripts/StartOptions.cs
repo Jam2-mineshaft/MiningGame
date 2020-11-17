@@ -2,18 +2,17 @@
 using System.Collections;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class StartOptions : MonoBehaviour
 {
-
-
-
 	public int sceneToStart = 1;                                        
 	public bool changeScenes;                                           
 	public bool changeMusicOnStart;                                     
-	public int musicToChangeTo = 0;                                   
+	public int musicToChangeTo = 0;
 
+	public GameObject select;
 
 	[HideInInspector] public bool inMainMenu = true;                   
 	[HideInInspector] public Animator animColorFade;                    
