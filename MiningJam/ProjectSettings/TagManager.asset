@@ -4,13 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<<<< Temporary merge branch 1
+  - Coal
+  - Gold
   - Section_Detection
   - Destructor
   - Cart_Destructor
   - GameWin
-  - Gold
-  - Coal
+  - Player 1
+  - Player 2
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - 
   - 
-  - Resources
+  - 
   - 
   - 
   - 

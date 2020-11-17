@@ -43,6 +43,7 @@ public class DestructorMovement : MonoBehaviour
 
             StartCoroutine(rockSpawner.SpawnRocks());
             cart.GetComponent<CartMovement>().Crash();
+            gameManager.hasCaveInHappened = true;
             gameManager.EndGame();
         }
     }
