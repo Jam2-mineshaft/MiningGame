@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CartMovement : MonoBehaviour
 {
+    GameManager gameManager;
+
     [SerializeField]
     float base_speed = 1f;
 
@@ -19,23 +21,20 @@ public class CartMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+
         current_speed = base_speed;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        //Move Platform
-        transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
-
-        AdjustSpeed();
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Destructor"))
+        if (!gameManager.GameFinished())
         {
-            print("gameover");
+            //Move Platform
+            transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
+
+            AdjustSpeed();
         }
     }
 
