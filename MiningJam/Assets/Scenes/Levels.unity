@@ -538,19 +538,6 @@ Transform:
   m_Father: {fileID: 1405907774}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &490891064 stripped
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490891064}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.01471081, y: 0.007606857, z: 0.012401962}
-  m_Center: {x: 0.000000018933488, y: 0.0022411016, z: 0.000000038251017}
 --- !u!1 &606138692 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6797211624705633273, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
@@ -569,6 +556,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.014710807, y: 0.0076068584, z: 0.012401965}
   m_Center: {x: 0.000000019158904, y: 0.0022411018, z: 0.000000038351207}
+--- !u!1 &717342333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1360664364}
+  m_Layer: 0
+  m_Name: Recovery GameObject (1360664364)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &911003091
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +601,7 @@ Transform:
   m_Children:
   - {fileID: 1817991152}
   m_Father: {fileID: 1405907774}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 16.021, y: -115.063, z: 0}
 --- !u!1 &922758832 stripped
 GameObject:
@@ -1106,118 +1109,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
---- !u!1 &1349456110 stripped
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1360664364}
-  - component: {fileID: 1360664368}
-  - component: {fileID: 1360664367}
-  - component: {fileID: 1360664366}
-  - component: {fileID: 1360664365}
-  m_Layer: 0
-  m_Name: Coal Lump
-  m_TagString: Coal
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &1360664364
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360664363}
+  m_GameObject: {fileID: 717342333}
   m_LocalRotation: {x: 0.41424778, y: 0.013952255, z: -0.6638495, w: -0.62250143}
   m_LocalPosition: {x: -0.141, y: 0.283, z: 2.8}
   m_LocalScale: {x: 17.133202, y: 17.133194, z: 17.133194}
   m_Children: []
   m_Father: {fileID: 1405907774}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -29.816, y: -285.776, z: -254.998}
---- !u!135 &1360664365
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360664363}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.0073554046
-  m_Center: {x: 0.00000002291759, y: 0.0022411018, z: 0.00000006795315}
---- !u!54 &1360664366
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360664363}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!23 &1360664367
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360664363}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 77be20c12d26c5646a50ee44431ce342, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1360664368
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360664363}
-  m_Mesh: {fileID: 9176569494470133984, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
 --- !u!1001 &1405907773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1247,7 +1152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4980447807773411989, guid: 5583a265544ee2f4092b8467f2579c6c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8448090153444734807, guid: 5583a265544ee2f4092b8467f2579c6c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1624,7 +1529,7 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812138127}
+  m_GameObject: {fileID: 1694594368}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -1637,7 +1542,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812138127}
+  m_GameObject: {fileID: 1694594368}
   m_LocalRotation: {x: -0, y: 0.8436845, z: -0, w: -0.53683937}
   m_LocalPosition: {x: 0.40817463, y: -0.685474, z: 2.6094217}
   m_LocalScale: {x: 0.33601663, y: 0.33601665, z: 0.33601663}
@@ -1879,7 +1784,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8571640435845227271}
-  - component: {fileID: 4709443711587773602}
   - component: {fileID: 7403840080515831912}
   - component: {fileID: 9061036993032337854}
   - component: {fileID: 9061036993032337855}
