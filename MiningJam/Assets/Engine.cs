@@ -10,11 +10,12 @@ public class Engine : MonoBehaviour
     void Awake()
     {
         coalCollectors = this.GetComponentsInChildren<CoalCollector>();
-        foreach(CoalCollector cc in coalCollectors)
+        foreach (CoalCollector cc in coalCollectors)
         {
             cc.engine = this;
         }
-        if(cart == null)
+
+        if (cart == null)
         {
             Debug.LogError("Engine not referencing cart.");
         }
@@ -22,6 +23,6 @@ public class Engine : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 }
