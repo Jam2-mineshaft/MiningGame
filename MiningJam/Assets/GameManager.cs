@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public Object gameScene;
     public Object menuScene;
     public bool hasCaveInHappened = false;
+    public GameObject player1Particles;
+    public GameObject player2Particles;
     GameObject player1;
     GameObject player2;
 
@@ -49,16 +51,20 @@ public class GameManager : MonoBehaviour
             if(player1.GetComponent<Mine>().currentGold > player2.GetComponent<Mine>().currentGold) // Player 1 wins
             {
                 winningPlayerText.text = "Player 1 Wins!".ToString();
+                player1Particles.SetActive(true);
             }
 
             if (player2.GetComponent<Mine>().currentGold > player1.GetComponent<Mine>().currentGold) // Player 2 wins
             {
                 winningPlayerText.text = "Player 2 Wins!".ToString();
+                player2Particles.SetActive(true);
             }
 
             if (player1.GetComponent<Mine>().currentGold == player2.GetComponent<Mine>().currentGold) // Draw
             {
                 winningPlayerText.text = "It's a Draw!".ToString();
+                player1Particles.SetActive(true);
+                player2Particles.SetActive(true);
             }
 
             if (hasCaveInHappened) // Cave in occured
