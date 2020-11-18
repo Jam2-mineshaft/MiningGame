@@ -17,6 +17,8 @@ public class Mine : MonoBehaviour
     public int currentCoal;
     public int currentGold;
 
+    public Text goldText;
+
     [Header("Audio Setup")]
     public GameObject audioManager;
 
@@ -69,7 +71,8 @@ public class Mine : MonoBehaviour
     {
         if (go.CompareTag("Gold"))
         {
-            //currentGold += goldSettings.valueToGive;
+            currentGold += goldSettings.valueToGive;
+            goldText.text = currentGold.ToString();
 
             //Dispose of Ore
             Instantiate(coalSettings.destructionParticles, hit.transform.position, Quaternion.identity);
