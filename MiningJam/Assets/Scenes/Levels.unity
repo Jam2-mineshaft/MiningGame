@@ -2079,6 +2079,10 @@ PrefabInstance:
       propertyPath: base_speed
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 769107349429818845, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: speed_deficit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2444612391617517287, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: gold_chunk
       value: 
@@ -2107,13 +2111,17 @@ PrefabInstance:
       propertyPath: mineReach
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5567846619452759730, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15725529
+      objectReference: {fileID: 0}
     - target: {fileID: 5614157897819412543, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: m_Name
       value: CartV0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8328248034617951712, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.75
+      value: -2.09
       objectReference: {fileID: 0}
     - target: {fileID: 8328248034617951712, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: m_LocalPosition.y

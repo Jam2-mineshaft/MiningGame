@@ -85,7 +85,6 @@ public class Mine : MonoBehaviour
             {
                 Instantiate(gold_chunk, RandomPointInBounds(cart.side_B_area.bounds), Quaternion.identity);
             }
-            Destroy(go);
         }
 
         else if (go.CompareTag("Coal"))
@@ -105,8 +104,9 @@ public class Mine : MonoBehaviour
             {
                 Instantiate(coal_chunk, RandomPointInBounds(cart.side_B_area.bounds), Quaternion.identity);
             }
-            Destroy(go);
         }
+
+        Destroy(go);
 
         #region harry's code
         /*

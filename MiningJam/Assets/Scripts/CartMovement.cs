@@ -19,7 +19,7 @@ public class CartMovement : MonoBehaviour
     float speed_deficit = 0.1f;
 
     private float min_speed = 0;
-    private float current_speed = 0;
+    [SerializeField]private float current_speed = 0;
 
     public GameObject[] furnace_lights;
 
