@@ -342,6 +342,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246631053}
   m_CullTransparentMesh: 0
+--- !u!1 &319344257 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 176613218568492223, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+  m_PrefabInstance: {fileID: 2031625364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &329059633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,7 +1369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6566533652370476574, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
       propertyPath: current_speed
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6566533652370476574, guid: 4612915ec52399b48a8b4a883e6e706d, type: 3}
       propertyPath: Rocks
@@ -2076,6 +2081,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 341964977}
     - target: {fileID: 769107349429818845, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: furnace_lights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 769107349429818845, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: base_speed
       value: 40
       objectReference: {fileID: 0}
@@ -2083,6 +2092,14 @@ PrefabInstance:
       propertyPath: speed_deficit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 769107349429818845, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: furnace_lights.Array.data[0]
+      value: 
+      objectReference: {fileID: 2076903788}
+    - target: {fileID: 769107349429818845, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: furnace_lights.Array.data[1]
+      value: 
+      objectReference: {fileID: 319344257}
     - target: {fileID: 2444612391617517287, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: gold_chunk
       value: 
@@ -2095,6 +2112,10 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1694594368}
+    - target: {fileID: 2444612391617517287, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: goldText
+      value: 
+      objectReference: {fileID: 1357327116}
     - target: {fileID: 2444612392489798811, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: gold_chunk
       value: 
@@ -2110,6 +2131,14 @@ PrefabInstance:
     - target: {fileID: 2444612392489798811, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: mineReach
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444612392489798811, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: goldText
+      value: 
+      objectReference: {fileID: 484311986}
+    - target: {fileID: 2997380123720902425, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5567846619452759730, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2181,6 +2210,11 @@ GameObject:
 --- !u!1 &2031625366 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2444612393181227323, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+  m_PrefabInstance: {fileID: 2031625364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2076903788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2444612392859315360, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
   m_PrefabInstance: {fileID: 2031625364}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2109443191

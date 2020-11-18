@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
                 player2Particles.SetActive(true);
             }
 
-            if (player1.GetComponent<Mine>().currentGold == player2.GetComponent<Mine>().currentGold) // Draw
+            if (player1.GetComponent<Mine>().currentGold == player2.GetComponent<Mine>().currentGold && !hasCaveInHappened) // Draw
             {
                 winningPlayerText.text = "It's a Draw!".ToString();
                 player1Particles.SetActive(true);

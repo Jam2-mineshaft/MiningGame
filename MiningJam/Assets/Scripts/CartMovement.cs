@@ -66,7 +66,7 @@ public class CartMovement : MonoBehaviour
 
             for (int i = 0; i < furnace_lights.Length; i++)
             {
-                furnace_lights[i].GetComponent<Light>().intensity = current_speed / 15;
+                furnace_lights[i].GetComponent<Light>().intensity = current_speed * speed_deficit / 45;
             }
         }
     }
