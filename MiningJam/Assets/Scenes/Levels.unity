@@ -342,11 +342,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246631053}
   m_CullTransparentMesh: 0
---- !u!1 &319344257 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 176613218568492223, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
-  m_PrefabInstance: {fileID: 2031625364}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &329059633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,6 +1937,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!108 &1942360102 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 2444612392822539190, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+  m_PrefabInstance: {fileID: 2031625364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1995599751 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6797211625726777059, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
@@ -2095,11 +2095,15 @@ PrefabInstance:
     - target: {fileID: 769107349429818845, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: furnace_lights.Array.data[0]
       value: 
-      objectReference: {fileID: 2076903788}
+      objectReference: {fileID: 2076903790}
     - target: {fileID: 769107349429818845, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: furnace_lights.Array.data[1]
       value: 
-      objectReference: {fileID: 319344257}
+      objectReference: {fileID: 1942360102}
+    - target: {fileID: 769107349429818845, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: cart_noise
+      value: 
+      objectReference: {fileID: 1564047296}
     - target: {fileID: 2444612391617517287, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: gold_chunk
       value: 
@@ -2212,9 +2216,9 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2444612393181227323, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
   m_PrefabInstance: {fileID: 2031625364}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2076903788 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2444612392859315360, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+--- !u!108 &2076903790 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 2444612392859315362, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
   m_PrefabInstance: {fileID: 2031625364}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2109443191
