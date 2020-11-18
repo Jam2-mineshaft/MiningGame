@@ -70,7 +70,7 @@ public class StartOptions : MonoBehaviour
 
 		Invoke("HideDelayed", fadeAlphaAnimationClip.length);
 
-		SceneManager.LoadScene("MiningScene");
+		SceneManager.LoadScene("Levels");
 	}
 
 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a6165aee3b3d32c41b65c3d732d0902f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - COWBOY JUNIOR
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e2641d0dd2a446e44857780b856c267b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

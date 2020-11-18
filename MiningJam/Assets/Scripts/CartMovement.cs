@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class CartMovement : MonoBehaviour
 {
+    public Cart cart;
+    public float fuel_effect = 2f;
+
+    GameManager gameManager;
+
     [SerializeField]
     float base_speed = 1f;
 
@@ -16,26 +21,53 @@ public class CartMovement : MonoBehaviour
     private float min_speed = 0;
     private float current_speed = 0;
 
+    public GameObject[] furnace_lights;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+
         current_speed = base_speed;
     }
+
+    public void Crash()
+    {
+        AudioSource[] sounds = this.GetComponents<AudioSource>();
+
+        //Move Platform
+        transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
+
+        sounds[1].Play();
+        sounds[0].Stop();
+    }
+
+    public void StopCart()
+    {
+        AudioSource[] sounds = this.GetComponents<AudioSource>();
+        sounds[0].Stop();
+    }
+
+    public void AddFuel()
+    {
+            current_speed += fuel_effect;
+    }
+
+
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        //Move Platform
-        transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
-
-        AdjustSpeed();
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Destructor"))
+        if (!gameManager.GameFinished())
         {
-            print("gameover");
+            //Move Platform
+            transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
+            AdjustSpeed();
+
+            for (int i = 0; i < furnace_lights.Length; i++)
+            {
+                furnace_lights[i].GetComponent<Light>().intensity = current_speed / 15;
+            }
         }
     }
 
@@ -45,11 +77,11 @@ public class CartMovement : MonoBehaviour
         {
             current_speed = max_speed;
         }
+
         if (current_speed < min_speed)
         {
             current_speed = min_speed;
         }
-
         current_speed -= speed_deficit * Time.deltaTime;
     }
 }
