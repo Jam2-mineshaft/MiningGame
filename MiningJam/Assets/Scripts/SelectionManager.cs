@@ -21,11 +21,12 @@ public class SelectionManager : MonoBehaviour
     public int audioSelection = 3;
 
     private float change = 5f;
-    private float KeyDelay = 0.3f;
+    private float KeyDelay = 0.1f;
     private float timePassed = 0f;
 
     private bool options = false;
     private bool lockSpeed = false;
+    private bool inMenu = true;
 
     [HideInInspector] public Animator animColorFade;
     [HideInInspector] public Animator animMenuAlpha;
@@ -34,10 +35,10 @@ public class SelectionManager : MonoBehaviour
 
     private ShowPanels showPanels;
 
-    StartOptions script;
-    StartOptions stsc;
-    QuitApplication qa;
-    ShowPanels sp;
+    private StartOptions script;
+    private StartOptions stsc;
+    private QuitApplication qa;
+    private ShowPanels sp;
 
 
     void GetInput()
@@ -105,6 +106,7 @@ public class SelectionManager : MonoBehaviour
         {
             if (Selection == 1)
             {
+                inMenu = false;
                 stsc.StartButtonClicked();
             }
             if (Selection == 2)
@@ -138,6 +140,7 @@ public class SelectionManager : MonoBehaviour
             {
                 audioSelection = 2;
             }
+            Sliders();
         }
 
         if (Input.GetAxis("DPADX") == -1 && CheckDelay())
@@ -218,14 +221,17 @@ public class SelectionManager : MonoBehaviour
 
     void Update()
     {
-        if (!options)
+        if (inMenu)
         {
-            GetInput();
-            UseButton();
-        }
-        else
-        {
-            Option();
+            if (!options)
+            {
+                GetInput();
+                UseButton();
+            }
+            else
+            {
+                Option();
+            }
         }
         timePassed += Time.deltaTime;
     }

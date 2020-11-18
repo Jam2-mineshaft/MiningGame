@@ -16,12 +16,12 @@ public class Pause : MonoBehaviour {
 
 	void Update ()
 	{ 
-		if (Input.GetButtonDown ("Cancel") && !isPaused && !startScript.inMainMenu) 
+		if (Input.GetButtonDown ("Pause") && !isPaused && !startScript.inMainMenu) 
 		{
 			DoPause();
 		} 
 
-		else if (Input.GetButtonDown ("Cancel") && isPaused && !startScript.inMainMenu) 
+		else if (Input.GetButtonDown ("Pause") && isPaused && !startScript.inMainMenu) 
 		{
 			UnPause ();
 		}
