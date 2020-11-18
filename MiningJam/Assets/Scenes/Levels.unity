@@ -2576,7 +2576,7 @@ PrefabInstance:
       objectReference: {fileID: 2076903790}
     - target: {fileID: 769107349429818845, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: fuel_effect
-      value: 3.5
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 769107349429818845, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: cart_noise
@@ -2718,6 +2718,14 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 9.217666
       objectReference: {fileID: 0}
+    - target: {fileID: 5871573602266946412, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: m_Size.y
+      value: 0.19567966
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871573602266946412, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: m_Center.y
+      value: -0.40216017
+      objectReference: {fileID: 0}
     - target: {fileID: 6486195150704903970, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: m_Size.x
       value: 4.5835123
@@ -2733,6 +2741,14 @@ PrefabInstance:
     - target: {fileID: 6486195150704903970, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: m_Size.z
       value: 9.059459
+      objectReference: {fileID: 0}
+    - target: {fileID: 6486195150704903970, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2396946
+      objectReference: {fileID: 0}
+    - target: {fileID: 6486195150704903970, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: m_Center.y
+      value: -0.3801527
       objectReference: {fileID: 0}
     - target: {fileID: 7276368493430495880, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: m_IsActive
