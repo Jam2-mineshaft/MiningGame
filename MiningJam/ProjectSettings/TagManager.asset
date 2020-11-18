@@ -17,6 +17,8 @@ TagManager:
   - GameWin
   - Player 1
   - Player 2
+  - Gold_Ore
+  - Coal_Ore
   layers:
   - Default
   - TransparentFX

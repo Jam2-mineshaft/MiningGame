@@ -69,7 +69,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7fae6ca888d61459ca9aac2cbea72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawn_time: 20
 --- !u!1 &4184061965775821290
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,7 +545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7fae6ca888d61459ca9aac2cbea72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawn_time: 10
 --- !u!1001 &1309356754003134540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -620,7 +618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
       propertyPath: m_TagString
-      value: Coal
+      value: Coal_Ore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
@@ -1609,7 +1607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
       propertyPath: m_TagString
-      value: Gold
+      value: Gold_Ore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
@@ -2226,7 +2224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
       propertyPath: m_TagString
-      value: Coal
+      value: Coal_Ore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
@@ -2313,7 +2311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
       propertyPath: m_TagString
-      value: Coal
+      value: Coal_Ore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
@@ -2540,7 +2538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
       propertyPath: m_TagString
-      value: Gold
+      value: Gold_Ore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
@@ -4085,7 +4083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
       propertyPath: m_TagString
-      value: Gold
+      value: Gold_Ore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
@@ -4172,7 +4170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 05958273b5c98c34fa8021540de1e606, type: 3}
       propertyPath: m_TagString
-      value: Gold
+      value: Gold_Ore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05958273b5c98c34fa8021540de1e606, type: 3}

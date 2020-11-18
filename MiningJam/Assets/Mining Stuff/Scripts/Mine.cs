@@ -38,24 +38,7 @@ public class Mine : MonoBehaviour
 
     private void Update()
     {
-        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * mineReach);
-       
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, mineReach))
-        {
-            if (Input.GetKeyDown(KeyCode.Joystick1Button0))
-            {
-                MineObject(hit.collider.gameObject);
-            }
-        }
-       
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, mineReach))
-        {
-            if (Input.GetKeyDown(KeyCode.Joystick2Button0))
-            {
-                MineObject(hit.collider.gameObject);
-            }
-        }
-        Debug.Log(hit.collider.name);
+
     }
 
     private Vector3 RandomPointInBounds(Bounds bounds)
@@ -67,7 +50,7 @@ public class Mine : MonoBehaviour
         );
     }
 
-    void MineObject(GameObject go)
+    public void MineObject(GameObject go)
     {
         if (go.CompareTag("Gold"))
         {
