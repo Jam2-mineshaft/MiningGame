@@ -37,23 +37,23 @@ public class Mine : MonoBehaviour
     private void Update()
     {
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * mineReach);
-
-        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+       
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, mineReach))
         {
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, mineReach))
+            if (Input.GetKeyDown(KeyCode.Joystick1Button0))
             {
                 MineObject(hit.collider.gameObject);
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Joystick2Button0))
+       
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, mineReach))
         {
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, mineReach))
+            if (Input.GetKeyDown(KeyCode.Joystick2Button0))
             {
                 MineObject(hit.collider.gameObject);
             }
         }
-
+        Debug.Log(hit.collider.name);
     }
 
     private Vector3 RandomPointInBounds(Bounds bounds)
@@ -69,7 +69,7 @@ public class Mine : MonoBehaviour
     {
         if (go.CompareTag("Gold"))
         {
-            //currentCoal += coalSettings.valueToGive;
+            //currentGold += goldSettings.valueToGive;
 
             //Dispose of Ore
             Instantiate(coalSettings.destructionParticles, hit.transform.position, Quaternion.identity);
@@ -80,15 +80,17 @@ public class Mine : MonoBehaviour
             {
                 Instantiate(gold_chunk, RandomPointInBounds(cart.side_A_area.bounds), Quaternion.identity);
             }
+
             else if (whatPlayerIsThis == 1)
             {
                 Instantiate(gold_chunk, RandomPointInBounds(cart.side_B_area.bounds), Quaternion.identity);
             }
+            Destroy(go);
         }
 
         else if (go.CompareTag("Coal"))
         {
-            //currentGold += goldSettings.valueToGive;
+            //currentCoal += coalSettings.valueToGive;
 
             //Dispose of Ore
             Instantiate(goldSettings.destructionParticles, hit.transform.position, Quaternion.identity);
@@ -103,9 +105,8 @@ public class Mine : MonoBehaviour
             {
                 Instantiate(coal_chunk, RandomPointInBounds(cart.side_B_area.bounds), Quaternion.identity);
             }
+            Destroy(go);
         }
-
-        Destroy(go);
 
         #region harry's code
         /*
