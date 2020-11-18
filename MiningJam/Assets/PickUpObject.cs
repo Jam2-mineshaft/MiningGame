@@ -38,37 +38,32 @@ public class PickUpObject : MonoBehaviour
             }
         }
 
-        
-            if (Input.GetKeyDown(KeyCode.Joystick1Button0) && whatPlayerIsThis == 0 && other.gameObject.CompareTag("Coal"))
-            { 
-                if (!isHolding)
-                {
-                    if (other.gameObject.CompareTag("Coal"))
-                    {
-                        obj = other.gameObject;
-                        obj.transform.parent = holdingSpot.transform;
-                        obj.transform.position = holdingSpot.transform.position;
-                        isHolding = true;
-                    }
-                }
-            }
-        
-
-
-            if (Input.GetKeyDown(KeyCode.Joystick2Button0) && whatPlayerIsThis == 1 && other.gameObject.CompareTag("Coal"))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button0) && whatPlayerIsThis == 0 && other.gameObject.CompareTag("Coal"))
+        {
+            if (!isHolding)
             {
-                if (!isHolding)
+                if (other.gameObject.CompareTag("Coal"))
                 {
-                    if (other.gameObject.CompareTag("Coal"))
-                    {
-                        obj = other.gameObject;
-                        obj.transform.parent = holdingSpot.transform;
-                        obj.transform.position = holdingSpot.transform.position;
-                        isHolding = true;
-                    }
+                    obj = other.gameObject;
+                    obj.transform.parent = holdingSpot.transform;
+                    obj.transform.position = holdingSpot.transform.position;
+                    isHolding = true;
                 }
             }
-        
+        }
 
+        if (Input.GetKeyDown(KeyCode.Joystick2Button0) && whatPlayerIsThis == 1 && other.gameObject.CompareTag("Coal"))
+        {
+            if (!isHolding)
+            {
+                if (other.gameObject.CompareTag("Coal"))
+                {
+                    obj = other.gameObject;
+                    obj.transform.parent = holdingSpot.transform;
+                    obj.transform.position = holdingSpot.transform.position;
+                    isHolding = true;
+                }
+            }
+        }
     }
 }

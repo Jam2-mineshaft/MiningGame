@@ -1005,8 +1005,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.46142167, y: 1.4, z: 2.6928213}
-  m_Center: {x: 0.036892768, y: 0.19, z: 1.9184854}
+  m_Size: {x: 0.15019415, y: 1.4, z: 2.6928213}
+  m_Center: {x: 0.022821425, y: 0.19, z: 1.9184854}
 --- !u!1 &1097235382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,8 +1575,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.46142167, y: 1.4, z: 2.6928213}
-  m_Center: {x: 0.036892768, y: 0.19, z: 1.9184854}
+  m_Size: {x: 0.15019415, y: 1.4, z: 2.6928213}
+  m_Center: {x: 0.022821425, y: 0.19, z: 1.9184854}
 --- !u!1 &1450812388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6797211625426399112, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
@@ -2638,6 +2638,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 28c3d35103d473f4d878f60a575d2b75, type: 2}
+    - target: {fileID: 2444612391349747829, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2444612391617517287, guid: 9169fe64defa6d7478d952c93f23f9ec, type: 3}
       propertyPath: gold_chunk
       value: 
