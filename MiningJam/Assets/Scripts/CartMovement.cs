@@ -21,7 +21,8 @@ public class CartMovement : MonoBehaviour
     private float min_speed = 0;
     private float current_speed = 0;
 
-    public GameObject[] furnace_lights;
+    public Light[] furnace_lights;
+    public AudioSource cart_noise;
 
     // Start is called before the first frame update
     void Start()
@@ -64,8 +65,9 @@ public class CartMovement : MonoBehaviour
 
             for (int i = 0; i < furnace_lights.Length; i++)
             {
-                furnace_lights[i].GetComponent<Light>().intensity = current_speed * speed_deficit / 45;
+                furnace_lights[i].intensity = current_speed * speed_deficit / 45;
             }
+            AdjustCartAudio();
         }
     }
 
@@ -82,5 +84,18 @@ public class CartMovement : MonoBehaviour
         }
 
         current_speed -= speed_deficit * Time.deltaTime;
+    }
+
+    void AdjustCartAudio()
+    {
+        if (current_speed < 30f)
+        {
+            cart_noise.pitch = 1f - (30f - current_speed) / 30f;
+            cart_noise.volume = 1f - (30f - current_speed) / 30f;
+        }
+        /*if (current_speed < 25f)
+        {
+            cart_noise.volume = 1f - (25f - current_speed) / 25f;
+        }*/
     }
 }
