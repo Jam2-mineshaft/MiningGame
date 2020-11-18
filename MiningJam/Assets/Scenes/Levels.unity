@@ -2382,6 +2382,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6797211624705633273, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
+      propertyPath: m_TagString
+      value: Gold_Ore
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797211624898393562, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
+      propertyPath: m_TagString
+      value: Gold_Ore
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797211625426399112, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
+      propertyPath: m_TagString
+      value: Gold_Ore
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797211625614242030, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
+      propertyPath: m_TagString
+      value: Coal_Ore
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797211625663053890, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
+      propertyPath: m_TagString
+      value: Coal_Ore
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797211625726777059, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
+      propertyPath: m_TagString
+      value: Coal_Ore
+      objectReference: {fileID: 0}
     - target: {fileID: 9143866328838606199, guid: 1e728fd7b69db83438b33aa665ad12f1, type: 3}
       propertyPath: m_RootOrder
       value: 9

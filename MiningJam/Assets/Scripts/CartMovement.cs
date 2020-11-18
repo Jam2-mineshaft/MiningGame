@@ -19,7 +19,7 @@ public class CartMovement : MonoBehaviour
     float speed_deficit = 0.1f;
 
     private float min_speed = 0;
-    [SerializeField]private float current_speed = 0;
+    private float current_speed = 0;
 
     public GameObject[] furnace_lights;
 
@@ -50,10 +50,8 @@ public class CartMovement : MonoBehaviour
 
     public void AddFuel()
     {
-            current_speed += fuel_effect;
+        current_speed += fuel_effect;
     }
-
-
 
     // Update is called once per frame
     void FixedUpdate()
@@ -82,6 +80,7 @@ public class CartMovement : MonoBehaviour
         {
             current_speed = min_speed;
         }
+
         current_speed -= speed_deficit * Time.deltaTime;
     }
 }

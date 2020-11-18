@@ -53,13 +53,23 @@ public class PickUpObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (ob == null)
+        if (other.gameObject.CompareTag("Gold_Ore") || other.gameObject.CompareTag("Coal_Ore"))
         {
-            ob = other.gameObject;
+            if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+            {
+                mining.MineObject(other.gameObject);
+            }
         }
         else
         {
-            return;
+            if (ob == null)
+            {
+                ob = other.gameObject;
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }
