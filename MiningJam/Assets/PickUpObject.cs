@@ -6,6 +6,7 @@ public class PickUpObject : MonoBehaviour
 {
     public bool isHolding = false;
 
+    public Collider collider;
     public GameObject obj;
     public Transform holdingSpot;
     public int whatPlayerIsThis;
@@ -15,6 +16,11 @@ public class PickUpObject : MonoBehaviour
     private void Start()
     {
         mining = this.GetComponent<Mine>();
+    }
+
+    private void Update()
+    {
+        
     }
 
     private void OnTriggerStay(Collider other)
@@ -32,9 +38,8 @@ public class PickUpObject : MonoBehaviour
             }
         }
 
-        if (other.gameObject.CompareTag("Coal"))
-        {
-            if (Input.GetKeyDown(KeyCode.Joystick1Button0) && whatPlayerIsThis == 0)
+        
+            if (Input.GetKeyDown(KeyCode.Joystick1Button0) && whatPlayerIsThis == 0 && other.gameObject.CompareTag("Coal"))
             { 
                 if (!isHolding)
                 {
@@ -42,17 +47,15 @@ public class PickUpObject : MonoBehaviour
                     {
                         obj = other.gameObject;
                         obj.transform.parent = holdingSpot.transform;
-                        obj.transform.position = Vector3.Lerp(obj.transform.position, holdingSpot.transform.position, 10 * Time.deltaTime);
+                        obj.transform.position = holdingSpot.transform.position;
                         isHolding = true;
                     }
                 }
             }
-        }
+        
 
 
-        if (other.gameObject.CompareTag("Coal"))
-        {
-            if (Input.GetKeyDown(KeyCode.Joystick2Button0) && whatPlayerIsThis == 1)
+            if (Input.GetKeyDown(KeyCode.Joystick2Button0) && whatPlayerIsThis == 1 && other.gameObject.CompareTag("Coal"))
             {
                 if (!isHolding)
                 {
@@ -60,12 +63,12 @@ public class PickUpObject : MonoBehaviour
                     {
                         obj = other.gameObject;
                         obj.transform.parent = holdingSpot.transform;
-                        obj.transform.position = Vector3.Lerp(obj.transform.position, holdingSpot.transform.position, 10 * Time.deltaTime);
+                        obj.transform.position = holdingSpot.transform.position;
                         isHolding = true;
                     }
                 }
             }
-        }
+        
 
     }
 }
