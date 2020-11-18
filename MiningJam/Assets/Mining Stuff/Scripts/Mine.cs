@@ -28,17 +28,9 @@ public class Mine : MonoBehaviour
 
     Cart cart;
 
-    RaycastHit hit;
-    RaycastHit[] hits;
-
     private void Start()
     {
         cart = transform.parent.GetComponent<Cart>();
-    }
-
-    private void Update()
-    {
-
     }
 
     private Vector3 RandomPointInBounds(Bounds bounds)
@@ -52,14 +44,14 @@ public class Mine : MonoBehaviour
 
     public void MineObject(GameObject go)
     {
-        if (go.CompareTag("Gold"))
+        if (go.CompareTag("Gold_Ore"))
         {
             currentGold += goldSettings.valueToGive;
             goldText.text = currentGold.ToString();
 
             //Dispose of Ore
-            Instantiate(coalSettings.destructionParticles, hit.transform.position, Quaternion.identity);
-            audioManager.GetComponent<PlayAudio>().PlayCoalAudio(); // Plays mining audio
+            Instantiate(goldSettings.destructionParticles, go.gameObject.transform.position, Quaternion.identity);
+            audioManager.GetComponent<PlayAudio>().PlayGoldAudio(); // Plays mining audio
 
             //Spawn Chunk
             if (whatPlayerIsThis == 0)
@@ -73,13 +65,13 @@ public class Mine : MonoBehaviour
             }
         }
 
-        else if (go.CompareTag("Coal"))
+        else if (go.CompareTag("Coal_Ore"))
         {
             //currentCoal += coalSettings.valueToGive;
 
             //Dispose of Ore
-            Instantiate(goldSettings.destructionParticles, hit.transform.position, Quaternion.identity);
-            audioManager.GetComponent<PlayAudio>().PlayGoldAudio(); // Plays mining audio
+            Instantiate(coalSettings.destructionParticles, go.gameObject.transform.position, Quaternion.identity);
+            audioManager.GetComponent<PlayAudio>().PlayCoalAudio(); // Plays mining audio
 
             //spawn Chunk
             if (whatPlayerIsThis == 0)

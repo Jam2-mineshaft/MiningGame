@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PickUpObject : MonoBehaviour
 {
-    private bool isHolding = false;
+    public bool isHolding = false;
 
-    public GameObject ob;
+    public GameObject obj;
     public Transform holdingSpot;
+    public int whatPlayerIsThis;
 
     Mine mining;
 
@@ -16,60 +17,55 @@ public class PickUpObject : MonoBehaviour
         mining = this.GetComponent<Mine>();
     }
 
-    private void Update()
-    {
-        //TODO : CHANGE INPUT BUTTON FROM 1 KEY TO CONTROLLER BUTTON
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            if (!isHolding)
-            {
-                if (ob != null)
-                {
-                    if (ob.gameObject.CompareTag("Coal"))
-                    {
-                        ob.transform.parent = holdingSpot.transform;
-                        isHolding = true;
-                    }
-                    else if (ob.gameObject.CompareTag("Gold"))
-                    {
-                        Destroy(ob);
-                        mining.currentGold += mining.goldSettings.valueToGive;
-                    }
-                }
-            }
-            else
-            {
-                if (ob.gameObject.CompareTag("Coal"))
-                {
-                    isHolding = false;
-                    Rigidbody rb = ob.GetComponent<Rigidbody>();
-                    rb.AddForce(this.transform.forward * 100);
-                    ob = null;
-                }
-            }
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Gold_Ore") || other.gameObject.CompareTag("Coal_Ore"))
         {
-            if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+            if (Input.GetKey(KeyCode.Joystick1Button0) && whatPlayerIsThis == 0)
+            {
+                mining.MineObject(other.gameObject);
+            }
+
+            if (Input.GetKey(KeyCode.Joystick2Button0) && whatPlayerIsThis == 1)
             {
                 mining.MineObject(other.gameObject);
             }
         }
-        else
+
+        if (other.gameObject.CompareTag("Coal"))
         {
-            if (ob == null)
-            {
-                ob = other.gameObject;
-            }
-            else
-            {
-                return;
+            if (Input.GetKeyDown(KeyCode.Joystick1Button0) && whatPlayerIsThis == 0)
+            { 
+                if (!isHolding)
+                {
+                    if (other.gameObject.CompareTag("Coal"))
+                    {
+                        obj = other.gameObject;
+                        obj.transform.parent = holdingSpot.transform;
+                        obj.transform.position = Vector3.Lerp(obj.transform.position, holdingSpot.transform.position, 10 * Time.deltaTime);
+                        isHolding = true;
+                    }
+                }
             }
         }
+
+
+        if (other.gameObject.CompareTag("Coal"))
+        {
+            if (Input.GetKeyDown(KeyCode.Joystick2Button0) && whatPlayerIsThis == 1)
+            {
+                if (!isHolding)
+                {
+                    if (other.gameObject.CompareTag("Coal"))
+                    {
+                        obj = other.gameObject;
+                        obj.transform.parent = holdingSpot.transform;
+                        obj.transform.position = Vector3.Lerp(obj.transform.position, holdingSpot.transform.position, 10 * Time.deltaTime);
+                        isHolding = true;
+                    }
+                }
+            }
+        }
+
     }
 }

@@ -19,6 +19,7 @@ TagManager:
   - Player 2
   - Gold_Ore
   - Coal_Ore
+  - Cart
   layers:
   - Default
   - TransparentFX
