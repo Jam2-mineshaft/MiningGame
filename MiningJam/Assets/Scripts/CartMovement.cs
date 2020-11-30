@@ -16,19 +16,19 @@ public class CartMovement : MonoBehaviour
     float max_speed = 20;
 
     [SerializeField]
-    float speed_deficit = 0.1f;
+    float speed_deficit = 0.5f;
 
     private float min_speed = 0;
     private float current_speed = 0;
-
+    private ParticleSystem PS;
     public Light[] furnace_lights;
     public AudioSource cart_noise;
-
+    public float fireSpeed;
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
-
+        PS = GetComponent<ParticleSystem>();
         current_speed = base_speed;
     }
 
@@ -53,7 +53,16 @@ public class CartMovement : MonoBehaviour
     {
         current_speed += fuel_effect;
     }
+    private void Update()
+    {
+        float emissionamount = current_speed / max_speed;
+        var emissioncontroller = PS.emission;
+        emissioncontroller.rateOverTime = emissionamount;
+        //var mainPS = PS.main;
+       // mainPS.simulationSpeed = fireSpeed;
 
+      
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -68,6 +77,10 @@ public class CartMovement : MonoBehaviour
                 furnace_lights[i].intensity = current_speed * speed_deficit / 45;
             }
             AdjustCartAudio();
+            //if (current_speed < 30f)
+            //{
+            //    fireSpeed = 1f - (30f - current_speed) / 30f;
+            //}
         }
     }
 
@@ -84,6 +97,8 @@ public class CartMovement : MonoBehaviour
         }
 
         current_speed -= speed_deficit * Time.deltaTime;
+
+      
     }
 
     void AdjustCartAudio()
