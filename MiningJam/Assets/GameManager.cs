@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     GameObject player1;
     GameObject player2;
 
+    public AudioSource bell;
+    public AudioSource music;
+
     private bool game_finished = false;
 
     private void Start()
@@ -34,8 +37,9 @@ public class GameManager : MonoBehaviour
     {
         game_finished = true;
 
-        AudioSource audio = GetComponent<AudioSource>();
-        audio.Play();
+        //AudioSource audio = GetComponent<AudioSource>();
+        bell.Play();
+        music.Stop();
 
         if (game_finished)
         {
