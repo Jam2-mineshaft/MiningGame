@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: b5146339d71654d45b24c2c1bc9c22a6
+guid: 8d908e9cf9f75e74a97bdb65bdeebc0c
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: grey_mid
-    second: {fileID: 2558102008176723105, guid: 28965ea158659e44e8cf19de85f5c077, type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: wood_light
-    second: {fileID: 2100000, guid: 785043b9641b5454c8efbbf9b59fcc10, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
