@@ -20,7 +20,7 @@ public class Footsteps : MonoBehaviour
     {
       if(Rb.velocity.magnitude > 1f && audsource.isPlaying == false)
         {
-            audsource.volume = Random.Range(0.7f, 1);
+            audsource.volume = Random.Range(0.4f, 0.6f);
             audsource.pitch = Random.Range(0.8f, 1.2f);
             audsource.Play();
         }

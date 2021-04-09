@@ -24,12 +24,16 @@ public class CartMovement : MonoBehaviour
     public Light[] furnace_lights;
     public AudioSource cart_noise;
     public float fireSpeed;
+
+    Vector3 crash_pos;
+    bool crashed;
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         PS = GetComponent<ParticleSystem>();
         current_speed = base_speed;
+        crashed = false;
     }
 
     public void Crash()
@@ -37,7 +41,9 @@ public class CartMovement : MonoBehaviour
         AudioSource[] sounds = this.GetComponents<AudioSource>();
 
         //Move Platform
-        transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
+        //transform.position += new Vector3(0, 0, current_speed * Time.deltaTime);
+        crash_pos = transform.position;
+        crashed = true;
 
         sounds[1].Play();
         sounds[0].Stop();
@@ -45,8 +51,10 @@ public class CartMovement : MonoBehaviour
 
     public void StopCart()
     {
+        Debug.Log("cart stop");
         AudioSource[] sounds = this.GetComponents<AudioSource>();
         sounds[0].Stop();
+        current_speed = 0;
     }
 
     public void AddFuel()
@@ -55,12 +63,16 @@ public class CartMovement : MonoBehaviour
     }
     private void Update()
     {
-        float emissionamount = current_speed / max_speed;
+        float emissionamount = current_speed / max_speed * 4;
         var emissioncontroller = PS.emission;
         emissioncontroller.rateOverTime = emissionamount;
         //var mainPS = PS.main;
        // mainPS.simulationSpeed = fireSpeed;
 
+        if (crashed)
+        {
+            transform.position = crash_pos;
+        }
       
     }
     // Update is called once per frame

@@ -65,5 +65,10 @@ public class PickUpObject : MonoBehaviour
                 }
             }
         }
+
+        if (isHolding)
+        {
+            obj.transform.position = holdingSpot.transform.position;
+        }
     }
 }

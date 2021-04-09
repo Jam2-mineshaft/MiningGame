@@ -12,7 +12,7 @@ public class DestructorMovement : MonoBehaviour
     private float cam_multiplier = 0;
     public Camera cam;
 
-    private int range = 60;
+    private float range = 60;
 
     private GameObject cart;
     private GameObject rocks;
@@ -34,8 +34,10 @@ public class DestructorMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Cart_Destructor"))
+        if (other.CompareTag("Cart_Destructor") && !gameManager.hasCaveInHappened)
         {
+
+            Debug.Log("calling?");
             hit_cart = true;
 
             rocks.transform.parent = null;
@@ -104,6 +106,11 @@ public class DestructorMovement : MonoBehaviour
         else
         {
             cam_multiplier = 0.6f;
+            //gameObject.SetActive(false);
+            GetComponent<ParticleSystem>().Stop();
+            GetComponent<AudioSource>().Stop();
+
+            range = Mathf.Lerp(range, 0, Time.deltaTime * 0.3f);
         }
 
         if (destructor_active)

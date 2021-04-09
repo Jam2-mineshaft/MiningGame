@@ -6,7 +6,7 @@ public class Pause : MonoBehaviour {
 
 	private ShowPanels showPanels;						
 	private bool isPaused;								
-	private StartOptions startScript;					
+	private StartOptions startScript;
 	
 	void Awake()
 	{

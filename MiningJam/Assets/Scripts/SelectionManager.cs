@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+using System.Runtime.InteropServices;
+
+
+
 
 public class SelectionManager : MonoBehaviour
 {
@@ -13,6 +17,15 @@ public class SelectionManager : MonoBehaviour
     public GameObject quit;
     public GameObject back;
     public GameObject masterUI;
+
+    public Button play;
+    public Button Options;
+    public Button HighScores;
+    public Button Quit;
+
+    public ColorBlock unhighlighted;
+    public ColorBlock hightlighted;
+
 
     public GameObject sfxSlider;
     public GameObject musicSlider;
@@ -40,6 +53,10 @@ public class SelectionManager : MonoBehaviour
     private QuitApplication qa;
     private ShowPanels sp;
 
+    
+
+    [DllImport("user32.dll")]
+    static extern bool SetCursorPos(int X, int Y);
 
     void GetInput()
     {
@@ -78,24 +95,40 @@ public class SelectionManager : MonoBehaviour
                 start.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                 option.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
                 quit.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+
+                //Quit.colors = unhighlighted;
+
+                //SetCursorPos(600, 500);
+                //Debug.Log((int)start.transform.position.x + (int)start.transform.position.y);
             }
             else if (Selection == 2)
             {
                 start.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
                 option.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                 highscore.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+
+                //SetCursorPos(600,650);
             }
             else if (Selection == 3)
             {
                 option.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
                 highscore.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                 quit.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+
+                //SetCursorPos(600, 800);
             }
             else if (Selection == 4)
             {
                 start.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
                 highscore.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
                 quit.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+
+
+                //Quit.colors = hightlighted;
+
+                SetCursorPos(600, 950);
+                
+                //SetCursorPos((int)quit.transform.position.x, (int)quit.transform.position.y);
             }
         }
     }
@@ -112,6 +145,11 @@ public class SelectionManager : MonoBehaviour
             if (Selection == 2)
             {
                 sp.ShowOptionsPanel();
+                options = true;
+            }
+            if (Selection == 3)
+            {
+                sp.ShowScorePanel();
                 options = true;
             }
             if (Selection == 4)
@@ -217,6 +255,21 @@ public class SelectionManager : MonoBehaviour
        stsc = masterUI.GetComponent<StartOptions>();
        qa = masterUI.GetComponent<QuitApplication>();
        sp = masterUI.GetComponent<ShowPanels>();
+
+        Quit = quit.GetComponent<Button>();
+
+
+        unhighlighted.normalColor = Color.white;
+        unhighlighted.highlightedColor = Color.red;
+        unhighlighted.pressedColor = Color.white;
+        unhighlighted.selectedColor = Color.white;
+        unhighlighted.disabledColor = Color.white;
+
+        hightlighted.normalColor = Color.red;
+        hightlighted.highlightedColor = Color.red;
+        hightlighted.pressedColor = Color.white;
+        hightlighted.selectedColor = Color.white;
+        hightlighted.disabledColor = Color.white;
     }
 
     void Update()
@@ -225,12 +278,12 @@ public class SelectionManager : MonoBehaviour
         {
             if (!options)
             {
-                GetInput();
-                UseButton();
+                //GetInput();
+                //UseButton();
             }
             else
             {
-                Option();
+                //Option();
             }
         }
         timePassed += Time.deltaTime;

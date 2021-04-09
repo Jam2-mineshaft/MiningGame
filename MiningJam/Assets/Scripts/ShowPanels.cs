@@ -6,8 +6,10 @@ public class ShowPanels : MonoBehaviour {
 	public GameObject optionsPanel;							 
 	public GameObject optionsTint;							
 	public GameObject menuPanel;							 
-	public GameObject pausePanel;							 
+	public GameObject pausePanel;
 
+	public GameObject scoresPanel;
+	public GameObject scoresTint;
 
 	public void ShowOptionsPanel()
 	{
@@ -19,6 +21,18 @@ public class ShowPanels : MonoBehaviour {
 	{
 		optionsPanel.SetActive(false);
 		optionsTint.SetActive(false);
+	}
+
+	public void ShowScorePanel()
+	{
+		scoresPanel.SetActive(true);
+		scoresTint.SetActive(true);
+	}
+
+	public void HideScorePanel()
+	{
+		scoresPanel.SetActive(false);
+		scoresTint.SetActive(false);
 	}
 
 	public void ShowMenu()

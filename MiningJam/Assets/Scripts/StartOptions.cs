@@ -39,9 +39,12 @@ public class StartOptions : MonoBehaviour
 
 	public void StartButtonClicked()
 	{
-			if (changeScenes)
+		showPanels.HideMenu();
+		if (changeScenes)
 			{
-				Invoke("LoadDelayed", fadeColorAnimationClip.length * .5f);
+			
+			Invoke("LoadDelayed", fadeColorAnimationClip.length * 2f);
+
 
 				animColorFade.SetTrigger("fade");
 			}
