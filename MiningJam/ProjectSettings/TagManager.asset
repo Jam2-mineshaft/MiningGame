@@ -3,7 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Coal
+  - Gold
+  - Section_Detection
+  - Destructor
+  - Cart_Destructor
+  - Start
+  - Options
+  - Highscore
+  - Quit
+  - Slider
+  - GameWin
+  - Player 1
+  - Player 2
+  - Gold_Ore
+  - Coal_Ore
+  - Cart
   layers:
   - Default
   - TransparentFX

@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 671793b3e76e88542a55fd03701a7646
+  - enabled: 0
+    path: Assets/Scenes/Movement scene.unity
+    guid: 51bf4a8cbce25104598e71c57e86f5c6
+  - enabled: 0
+    path: Assets/Scenes/MiningScene.unity
+    guid: 5ebe623cb968ffe4da929ba289658da2
+  - enabled: 1
+    path: Assets/Scenes/Levels.unity
+    guid: d39371e7f29f5cf4caa0bab63fe5d62d
+  - enabled: 0
+    path: Assets/Scenes/EngineFuel+Gold Collection.unity
+    guid: e351c669efe17204999a104f3d2c60c1
+  - enabled: 0
+    path: Assets/Scenes/CartMovementScene.unity
+    guid: 92993ef748038c44697c3f627644e5ab
   m_configObjects: {}
